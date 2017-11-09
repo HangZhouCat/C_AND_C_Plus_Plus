@@ -1,0 +1,28 @@
+﻿生成启动时间为 2017-10-19 2:57:07。
+     1>项目“Z:\GitHub\C_AND_C_Plus_Plus\C\Disk_File\Write_Char_To_File\Write_Char_To_File.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“.\Debug\Write_Char_To_File.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         D:\VS2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
+         Main.cpp
+     1>z:\github\c_and_c_plus_plus\c\disk_file\write_char_to_file\main.cpp(13): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\vs2010\vc\include\stdio.h(234) : 参见“fopen”的声明
+       ManifestResourceCompile:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo".\Debug\Write_Char_To_File.exe.embed.manifest.res" .\Debug\Write_Char_To_File_manifest.rc 
+       Link:
+         D:\VS2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\Write_Char_To_File.exe" /INCREMENTAL /NOLOGO odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:".\Debug\Write_Char_To_File.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"Z:\GitHub\C_AND_C_Plus_Plus\C\Disk_File\Write_Char_To_File\Debug\Write_Char_To_File.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\Write_Char_To_File.lib" /MACHINE:X86 .\Debug\Write_Char_To_File.exe.embed.manifest.res
+         .\Debug\Main.obj
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:".\Debug\Write_Char_To_File.exe.embed.manifest" /manifest .\Debug\Write_Char_To_File.exe.intermediate.manifest
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo".\Debug\Write_Char_To_File.exe.embed.manifest.res" .\Debug\Write_Char_To_File_manifest.rc 
+       LinkEmbedManifest:
+         所有输出均为最新。
+         Write_Char_To_File.vcxproj -> Z:\GitHub\C_AND_C_Plus_Plus\C\Disk_File\Write_Char_To_File\.\Debug\Write_Char_To_File.exe
+       FinalizeBuildStatus:
+         正在删除文件“.\Debug\Write_Char_To_File.unsuccessfulbuild”。
+         正在对“.\Debug\Write_Char_To_File.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“Z:\GitHub\C_AND_C_Plus_Plus\C\Disk_File\Write_Char_To_File\Write_Char_To_File.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.23

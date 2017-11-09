@@ -1,0 +1,36 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Demo - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPD1.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Debug/" /Fp"Debug/Demo.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
+"Z:\GitHub\C_AND_C_Plus_Plus\C\Disk_File\Demo\Main.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPD1.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPD2.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/Demo.pdb" /debug /machine:I386 /out:"Debug/Demo.exe" /pdbtype:sept 
+.\Debug\Main.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPD2.tmp"
+<h3>Output Window</h3>
+Compiling...
+Main.cpp
+Linking...
+LINK : warning LNK4076: invalid incremental status file "Debug/Demo.ilk"; linking nonincrementally
+Creating command line "bscmake.exe /nologo /o"Debug/Demo.bsc"  .\Debug\Main.sbr"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+Demo.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
