@@ -10,7 +10,7 @@ void main(void)
 		float d = 3.14;
 		double e = 6.12345;
 		long f = 1234;
-	
+		__int64 g = 1234;		//跟long long 整型一个效果  只不过VC6.0中不支持long long 数据类型
 
 		
 		
@@ -37,7 +37,8 @@ void main(void)
 		num = sizeof(f);
 		printf("long f %d\n",num);
 
-
+		num = sizeof(g);
+		printf("__int64 g %d\n",num);
 
 		getchar();
 
