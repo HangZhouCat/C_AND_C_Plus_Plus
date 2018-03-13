@@ -1,0 +1,60 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MyTCPTran - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP6ECE.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Debug/" /Fp"Debug/MyTCPTran.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\SOURCE_CODE\GITHUB\C_AND_C_PLUS_PLUS\STUDY_RECORD\彻底研究黑客编程技术揭秘\CHAPTER1\MyTCPTran\MyTcpTran.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP6ECE.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP6ECF.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/MyTCPTran.pdb" /debug /machine:I386 /out:"Debug/MyTCPTran.exe" /pdbtype:sept 
+".\Debug\MyTcpTran.obj"
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP6ECF.tmp"
+<h3>Output Window</h3>
+Compiling...
+MyTcpTran.cpp
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.h(19) : error C2871: 'std' : does not exist or is not a namespace
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.h(29) : error C2018: unknown character '0xa3'
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.h(29) : error C2018: unknown character '0xba'
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.h(30) : error C2320: expected ':' to follow access specifier 'type'
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.h(34) : error C2061: syntax error : identifier 'string'
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.cpp(7) : error C2871: 'std' : does not exist or is not a namespace
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.cpp(75) : warning C4002: too many actual parameters for macro 'LOBYTE'
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.cpp(75) : error C2440: 'type cast' : cannot convert from 'struct WSAData' to 'unsigned long'
+        No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.cpp(76) : warning C4002: too many actual parameters for macro 'HIBYTE'
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.cpp(76) : error C2440: 'type cast' : cannot convert from 'struct WSAData' to 'unsigned long'
+        No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.cpp(102) : error C2061: syntax error : identifier 'string'
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.cpp(114) : error C2065: 'strBindIp' : undeclared identifier
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.cpp(114) : error C2228: left of '.empty' must have class/struct/union type
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.cpp(126) : error C2228: left of '.c_str' must have class/struct/union type
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.cpp(131) : error C2065: 'BindPort' : undeclared identifier
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.cpp(154) : error C2018: unknown character '0xa3'
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.cpp(154) : error C2018: unknown character '0xbb'
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.cpp(156) : error C2143: syntax error : missing ';' before '}'
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.cpp(222) : error C2065: 'addr' : undeclared identifier
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.cpp(222) : error C2065: 'addrlen' : undeclared identifier
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.cpp(224) : error C2018: unknown character '0xa3'
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.cpp(224) : error C2018: unknown character '0xbb'
+e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter1\mytcptran\mytcptran.cpp(226) : error C2143: syntax error : missing ';' before '}'
+执行 cl.exe 时出错.
+Creating command line "bscmake.exe /nologo /o"Debug/MyTCPTran.bsc"  ".\Debug\MyTcpTran.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+MyTCPTran.exe - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

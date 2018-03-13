@@ -37,7 +37,9 @@ public:
 	SOCKET myaccept(SOCKET sock, const char *buf, int len,int flag,int overtime);
 
 	//向服务器端/客户端发送数据/命令函数
+	int mysend(SOCKET sock,const char *buf,int len,int flag,int overtime);
 
+	//接收从客户端/服务器端发来的数据/命令函数
 	int myrecv(SOCKET sock,const *buf,int len,int flag,int overtime,char *EndMark, BOOL soonflag=FALSE);
 
 private:
