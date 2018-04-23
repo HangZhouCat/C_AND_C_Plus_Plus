@@ -1,0 +1,36 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Keylog_Driver - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP65BB.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/Keylog_Driver.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\SOURCE_CODE\GITHUB\C_AND_C_PLUS_PLUS\HACKER_TOOLS\Keylog_Driver\Main.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP65BB.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP65BC.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Keylog_Driver.pdb" /debug /machine:I386 /out:"Debug/Keylog_Driver.exe" /pdbtype:sept 
+.\Debug\Main.obj
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP65BC.tmp"
+<h3>Output Window</h3>
+Compiling...
+Main.cpp
+f:\WINDDK\3790.1830\inc\ddk\wxp\ntddk.h(10778) : error C2146: syntax error : missing ';' before identifier 'ContextRecord'
+f:\WINDDK\3790.1830\inc\ddk\wxp\ntddk.h(10778) : error C2501: '_EXCEPTION_POINTERS::PCONTEXT' : missing storage-class or type specifiers
+f:\WINDDK\3790.1830\inc\ddk\wxp\ntddk.h(10778) : error C2501: '_EXCEPTION_POINTERS::ContextRecord' : missing storage-class or type specifiers
+f:\WINDDK\3790.1830\inc\ddk\wxp\ntddk.h(11722) : fatal error C1189: #error :  "no target architecture"
+Ö´ÐÐ cl.exe Ê±³ö´í.
+
+
+
+<h3>Results</h3>
+Keylog_Driver.exe - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -6,28 +6,27 @@
 --------------------Configuration: 指针 - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPBE13.tmp" with contents
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPC325.tmp" with contents
 [
 /nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/指针.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
 "E:\SOURCE_CODE\GITHUB\C_AND_C_PLUS_PLUS\STUDY_RECORD\C++轻松入门\指针\Main.cpp"
 ]
-Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPBE13.tmp" 
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPBE14.tmp" with contents
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPC325.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPC326.tmp" with contents
 [
 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/指针.pdb" /debug /machine:I386 /out:"Debug/指针.exe" /pdbtype:sept 
 ".\Debug\Main.obj"
 ]
-Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPBE14.tmp"
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPC326.tmp"
 <h3>Output Window</h3>
 Compiling...
 Main.cpp
-E:\SOURCE_CODE\GITHUB\C_AND_C_PLUS_PLUS\STUDY_RECORD\C++轻松入门\指针\Main.cpp(107) : error C2166: l-value specifies const object
-执行 cl.exe 时出错.
+Linking...
 
 
 
 <h3>Results</h3>
-指针.exe - 1 error(s), 0 warning(s)
+指针.exe - 0 error(s), 0 warning(s)
 </pre>
 </body>
 </html>

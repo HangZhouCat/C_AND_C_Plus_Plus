@@ -114,18 +114,84 @@ void Point_Const1()
 //正确改变常量指针指向的数据值及指向地址
 	int i = 8;
 	int n = 18;
-	const int *p = &i;
-	i = 28;
+	const int *p = &i;		//常量指针指向变量i
+	i = 28;					//改变常量i的值
+	cout<<*p<<endl;
+	p = &n;					//把常量指针p指向n
+	cout<<*p<<endl;
 	
 
 
 }
+void Point_Const2()
+{
+//指针常量的正确使用方法
+	int i = 8;
+	int n = 8;
+	int *const p = &i;		//定义指针常量p，并初始化指向变量i
+	*p = 12;				//通过指针常量来改变其指向的变量i的值
+	cout<<*p<<endl;
+	i = i + n;
+	cout<<*p<<endl;
 
+}
+void Point_Fun_Swap(int *px,int *py)
+{
+//定义交换函数
+	int temp = *px;
+	*px = *py;
+	*py = temp;
+	
+}
+void Point_Fun()
+{
+//指针作为参数，对两个变量值进行交换
+	
+	int a = 88,b = 208;
+	cout<<"a="<<a<<"\tb="<<b<<endl;
+	Point_Fun_Swap(&a,&b);
+	cout<<"a="<<a<<"\tb="<<b<<endl;
+
+}
+void Point_Array_Copy(int *pDst, const int *pSrc,int slen)
+{
+
+	for (int i = 0;i < slen;i++)
+	{
+
+		*pDst++ = *pSrc++;
+
+	}
+
+}
+void Point_Array_Copy_disp(int *p,int len)
+{
+
+	
+	for (int i=0;i<len;i++)
+	{
+
+		cout<<*(p+i)<<"";
+
+
+	}
+
+	cout<<endl;
+
+}
+void Point_Array_Copy_Main()
+{
+
+	int array1[20] = {0};
+
+
+
+}
 void main()
 {
 
 
-	Point_Array_4();
+	Point_Fun();
 
 
 }

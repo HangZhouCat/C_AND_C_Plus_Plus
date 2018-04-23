@@ -22,6 +22,10 @@ void StrCopy()
 {
 //×Ö·û´®¸´ÖÆº¯Êý
 
+	char str1[10],str2[10];
+	char str3[] = "hello";
+	
+
 
 }
 void StrConcat()
