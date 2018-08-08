@@ -93,6 +93,10 @@ SOURCE=.\Main.cpp
 # End Source File
 # Begin Source File
 
+SOURCE=.\Point.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\Saving.cpp
 # End Source File
 # Begin Source File
@@ -110,6 +114,10 @@ SOURCE=.\Test.cpp
 # Begin Source File
 
 SOURCE=.\Constant.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Point.h
 # End Source File
 # Begin Source File
 
