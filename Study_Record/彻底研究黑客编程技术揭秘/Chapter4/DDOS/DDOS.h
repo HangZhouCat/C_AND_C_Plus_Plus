@@ -30,7 +30,7 @@ public:
 	void syn_flood();		//SYN洪水攻击
 	void tcp_flood();		//TCP多连接攻击
 private:
-	void fill_udp_buffer();
+	void fill_udp_buffer(char *szDstIp,unsigned short dPort);
 	void fill_syn_buffer();
 
 };
