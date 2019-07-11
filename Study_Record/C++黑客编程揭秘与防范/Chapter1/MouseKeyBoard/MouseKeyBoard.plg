@@ -1,0 +1,57 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MouseKeyBoard - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/MouseKeyBoard.res" /d "NDEBUG" /d "_AFXDLL" "E:\SOURCE_CODE\GITHUB\C_AND_C_PLUS_PLUS\STUDY_RECORD\C++ºÚ¿Í½ÒÃØÓë·À·¶\CHAPTER1\MouseKeyBoard\MouseKeyBoard.rc"" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP2B28.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Release/" /Fp"Release/MouseKeyBoard.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\SOURCE_CODE\GITHUB\C_AND_C_PLUS_PLUS\STUDY_RECORD\C++ºÚ¿Í½ÒÃØÓë·À·¶\CHAPTER1\MouseKeyBoard\BoardRefresh.cpp"
+"E:\SOURCE_CODE\GITHUB\C_AND_C_PLUS_PLUS\STUDY_RECORD\C++ºÚ¿Í½ÒÃØÓë·À·¶\CHAPTER1\MouseKeyBoard\MouseKeyBoard.cpp"
+"E:\SOURCE_CODE\GITHUB\C_AND_C_PLUS_PLUS\STUDY_RECORD\C++ºÚ¿Í½ÒÃØÓë·À·¶\CHAPTER1\MouseKeyBoard\MouseKeyBoardDlg.cpp"
+"E:\SOURCE_CODE\GITHUB\C_AND_C_PLUS_PLUS\STUDY_RECORD\C++ºÚ¿Í½ÒÃØÓë·À·¶\CHAPTER1\MouseKeyBoard\SimInPut.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP2B28.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP2B29.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Release/" /Fp"Release/MouseKeyBoard.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\SOURCE_CODE\GITHUB\C_AND_C_PLUS_PLUS\STUDY_RECORD\C++ºÚ¿Í½ÒÃØÓë·À·¶\CHAPTER1\MouseKeyBoard\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP2B29.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP2B2A.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/MouseKeyBoard.pdb" /machine:I386 /out:"Release/MouseKeyBoard.exe" 
+".\Release\BoardRefresh.obj"
+".\Release\MouseKeyBoard.obj"
+".\Release\MouseKeyBoardDlg.obj"
+".\Release\SimInPut.obj"
+".\Release\StdAfx.obj"
+".\Release\MouseKeyBoard.res"
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP2B2A.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+BoardRefresh.cpp
+MouseKeyBoard.cpp
+MouseKeyBoardDlg.cpp
+SimInPut.cpp
+Generating Code...
+Linking...
+Creating command line "bscmake.exe /nologo /o"Release/MouseKeyBoard.bsc"  ".\Release\StdAfx.sbr" ".\Release\BoardRefresh.sbr" ".\Release\MouseKeyBoard.sbr" ".\Release\MouseKeyBoardDlg.sbr" ".\Release\SimInPut.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+MouseKeyBoard.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
