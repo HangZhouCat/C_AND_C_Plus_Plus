@@ -5,6 +5,9 @@
 #include "PortScan.h"
 #include "PortScanDlg.h"
 
+#include <WinSock2.h>
+#pragma comment (lib,"ws2_32")
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #undef THIS_FILE
@@ -181,7 +184,74 @@ void CPortScanDlg::OnBUTTONScan()
 	WSADATA wsaData;
 	WSAStartup(MAKEWORD(2,2),&wsaData);
 
-	//
 
+	DWORD dwIpAddr = 0;	//IP地址
+	WORD wStartPort = 0,wEndPort = 0,wCurrPort = 0;	//开始端口、结束端口、和当前端口
+	
+	m_IpAddr.GetAddress(dwIpAddr);	//得到IP地址框中的IP地址。
+	
+	//得到编辑框中的开始端口和结束端口号
+	wStartPort = GetDlgItemInt(IDC_EDIT_StartPort,FALSE,FALSE);
+	wEndPort = GetDlgItemInt(IDC_EDIT_EndPort,FALSE,FALSE);
+
+	CTime starttime,endtime;
+
+	//获得扫描开始时间
+	starttime = CTime::GetCurrentTime();
+
+	//逐个连接从开始端口到结束端口之间的所有端口
+	for (wCurrPort = wStartPort; wCurrPort <= wEndPort; wCurrPort++)
+	{
+
+
+		SOCKET s = socket(PF_INET,SOCK_STREAM,IPPROTO_TCP);
+
+		struct sockaddr_in ServAddr;
+		ServAddr.sin_family = AF_INET;
+		ServAddr.sin_addr.S_un.S_addr = htonl(dwIpAddr);
+		ServAddr.sin_port = htonl(wCurrPort);
+
+
+		CString strPort;
+		//连接当前端口
+		if( connect(s,(SOCKADDR*) &ServAddr,sizeof(SOCKADDR) ) ==0 )
+		{
+
+
+			
+			strPort.Format("[%d] is open", wCurrPort);
+			m_ListPorts.AddString(strPort);
+
+
+		}
+		else
+		{
+
+
+			strPort.Format("[%d] is close", wCurrPort);
+			m_ListPorts.AddString(strPort);
+
+		}
+
+
+		closesocket(s);
+
+	}
+
+
+
+	//获得扫描结束时间
+	endtime = CTime::GetCurrentTime();
+	
+	//计算扫描花费的时间
+	CTimeSpan t = endtime - starttime;
+	CString str;
+	str.Format("耗时：%02d:02d:02d", t.GetHours(),t.GetMinutes(), t.GetSeconds());
+
+	m_ListPorts.AddString(str);
+
+	m_BtnScan.EnableWindow(TRUE);
+
+	WSACleanup();
 
 }
